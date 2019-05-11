@@ -65,13 +65,32 @@
 # *head, b, c, d = range(5)
 # print(head, b, c, d)
 
-metro_areas = [('Tokyo', 'JP', 36.933, (35.689722, 139.691667)),
-               ('Delhi NCR', 'IN', 21.935, (28.613889, 77.208889)),
-               ('Mexico City', 'MX', 20.142, (19.433333, -99.133333)),
-               ('New York-Newark', 'US', 20.104, (40.808611, -74.020386)),
-               ('Sao Paulo', 'BR', 19.694, (-23.547778, -46.635833))]
-print(('{:15} | {:^9} |{:^9}'.format('', 'lat.', 'long.')))
-fmt = '{:15} | {:9.4f} | {:9.4f}'
-for name, cc, pop, (latitude, longitude) in metro_areas:
-    if longitude <= 0:
-        print(fmt.format(name, latitude, longitude))
+# metro_areas = [('Tokyo', 'JP', 36.933, (35.689722, 139.691667)),
+#                ('Delhi NCR', 'IN', 21.935, (28.613889, 77.208889)),
+#                ('Mexico City', 'MX', 20.142, (19.433333, -99.133333)),
+#                ('New York-Newark', 'US', 20.104, (40.808611, -74.020386)),
+#                ('Sao Paulo', 'BR', 19.694, (-23.547778, -46.635833))]
+# print(('{:15} | {:^9} |{:^9}'.format('', 'lat.', 'long.')))
+# fmt = '{:15} | {:9.4f} | {:9.4f}'
+# for name, cc, pop, (latitude, longitude) in metro_areas:
+#     if longitude <= 0:
+#         print(fmt.format(name, latitude, longitude))
+
+# 定义和使用具名函数
+from collections import namedtuple
+Ctty = namedtuple('City', 'name country population coordinates')
+tokyo = Ctty('Tokyo', 'JP', 36.33, (35.689722, 139.691667))
+# print(tokyo)
+# print(tokyo.population)
+# print(tokyo.coordinates)
+# print(tokyo[1])
+
+# 具名元组的属性和方法
+# print(Ctty._fields)
+LatLong = namedtuple('Latlong', 'lat long')
+delhi_data = ('Delhi NCR', 'IN', 21.935, LatLong(28.613889, 77.208889))
+delhi = Ctty._make(delhi_data)
+# print(delhi)
+# print(delhi._asdict())
+for key, value in delhi._asdict().items():
+    print(key +':', value)
