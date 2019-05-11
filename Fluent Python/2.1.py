@@ -1,25 +1,25 @@
 # -*- encoding=utf-8 -*-
 # 使用列表推导式计算笛卡尔积
-# colors = ['black', 'white']
-# sizes = ['S', 'M', 'L']
-# tshirs = [(color, size) for color in colors for size in sizes]
-# print(tshirs)
-#
-# for color in colors:
-#     for size in sizes:
-#         print((color, size))
-#
-# tshirs = [(color, size) for size in sizes for color in colors]
-# print(tshirs)
+colors = ['black', 'white']
+sizes = ['S', 'M', 'L']
+tshirs = [(color, size) for color in colors for size in sizes]
+print(tshirs)
+
+for color in colors:
+    for size in sizes:
+        print((color, size))
+
+tshirs = [(color, size) for size in sizes for color in colors]
+print(tshirs)
 
 # 用生成器表达式初始化元组和数组
-# symbols = 'abcdef'
-# a = tuple(ord(symbol) for symbol in symbols)
-# print(a)
-#
-# import array
-# a = array.array('I', (ord(symbol) for symbol in symbols))
-# print(a)
+symbols = 'abcdef'
+a = tuple(ord(symbol) for symbol in symbols)
+print(a)
+
+import array
+a = array.array('I', (ord(symbol) for symbol in symbols))
+print(a)
 
 # 使用生成器表达式计算笛卡尔积
 # colors = ['black', 'white']
@@ -65,16 +65,16 @@
 # *head, b, c, d = range(5)
 # print(head, b, c, d)
 
-# metro_areas = [('Tokyo', 'JP', 36.933, (35.689722, 139.691667)),
-#                ('Delhi NCR', 'IN', 21.935, (28.613889, 77.208889)),
-#                ('Mexico City', 'MX', 20.142, (19.433333, -99.133333)),
-#                ('New York-Newark', 'US', 20.104, (40.808611, -74.020386)),
-#                ('Sao Paulo', 'BR', 19.694, (-23.547778, -46.635833))]
-# print(('{:15} | {:^9} |{:^9}'.format('', 'lat.', 'long.')))
-# fmt = '{:15} | {:9.4f} | {:9.4f}'
-# for name, cc, pop, (latitude, longitude) in metro_areas:
-#     if longitude <= 0:
-#         print(fmt.format(name, latitude, longitude))
+metro_areas = [('Tokyo', 'JP', 36.933, (35.689722, 139.691667)),
+               ('Delhi NCR', 'IN', 21.935, (28.613889, 77.208889)),
+               ('Mexico City', 'MX', 20.142, (19.433333, -99.133333)),
+               ('New York-Newark', 'US', 20.104, (40.808611, -74.020386)),
+               ('Sao Paulo', 'BR', 19.694, (-23.547778, -46.635833))]
+print(('{:15} | {:^9} |{:^9}'.format('', 'lat.', 'long.')))
+fmt = '{:15} | {:9.4f} | {:9.4f}'
+for name, cc, pop, (latitude, longitude) in metro_areas:
+    if longitude <= 0:
+        print(fmt.format(name, latitude, longitude))
 
 # 定义和使用具名函数
 from collections import namedtuple
@@ -90,7 +90,7 @@ tokyo = Ctty('Tokyo', 'JP', 36.33, (35.689722, 139.691667))
 LatLong = namedtuple('Latlong', 'lat long')
 delhi_data = ('Delhi NCR', 'IN', 21.935, LatLong(28.613889, 77.208889))
 delhi = Ctty._make(delhi_data)
-# print(delhi)
-# print(delhi._asdict())
+print(delhi)
+print(delhi._asdict())
 for key, value in delhi._asdict().items():
     print(key +':', value)
