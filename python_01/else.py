@@ -21,29 +21,29 @@
 #         break
 
 ## 给定一个不超过5位的正整数，判断其有几位，依次打印出个位、十位、百位、千位、万位
-# val = int(input('>>>'))
-# print(val)
-#
-# if val >= 1000: # ܑԡ
-#     if val>=10000:
-#         num = 5
-#     else:
-#         num = 4
-# else:
-#     if val>=100:
-#         num = 3
-#     elif val >= 10:
-#         num = 2
-#     else:
-#         num = 1
-#
-# print(num)
-# pre = 0
-#
-# for i in range(num,0,-1):
-#     cur = val//(10**(i-1))
-#     print(cur - pre*10)
-#     pre = cur
+val = int(input('>>>'))
+print(val)
+
+if val >= 1000: # ܑԡ
+    if val>=10000:
+        num = 5
+    else:
+        num = 4
+else:
+    if val>=100:
+        num = 3
+    elif val >= 10:
+        num = 2
+    else:
+        num = 1
+
+print(num)
+pre = 0
+
+for i in range(num,0,-1):
+    cur = val//(10**(i-1))
+    print(cur - pre*10)
+    pre = cur
 
 # else 子句
 # 如果循环正常结束，就执行else子句，如果使用break终止，else子句不会执行
