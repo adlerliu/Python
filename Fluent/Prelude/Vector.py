@@ -1,5 +1,13 @@
 # -*- encoding=utf-8 -*-
 
+"""
+author: Adler Liu(刘德涵)
+url: https://adlerliu.me
+warehouse：https://github.com/adlerliu/Python/tree/devops
+copyright: © 2018 Adler Liu
+license: MIT, see LICENSE for more details.
+"""
+
 # 一个简单的二维向量类
 from math import hypot
 
@@ -27,6 +35,6 @@ class Vector:
     def __matmul__(self, scalar):
         return Vector(self.x  *  scalar, self.y * scalar)
 
-## 它能把一个对象用字符串的形式表现出来
+# 它能把一个对象用字符串的形式表现出来
 test = Vector()
 print(test)
