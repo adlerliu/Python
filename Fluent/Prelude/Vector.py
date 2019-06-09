@@ -3,7 +3,6 @@
 """
 author: Adler Liu(刘德涵)
 url: https://adlerliu.me
-warehouse：https://github.com/adlerliu/Python/tree/devops
 copyright: © 2018 Adler Liu
 license: MIT, see LICENSE for more details.
 """

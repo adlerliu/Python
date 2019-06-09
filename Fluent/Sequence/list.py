@@ -2,7 +2,6 @@
 """
 author: Adler Liu(刘德涵)
 url: https://adlerliu.me
-warehouse：https://github.com/adlerliu/Python/tree/devops
 copyright: © 2018 Adler Liu
 license: MIT, see LICENSE for more details.
 """
@@ -34,7 +33,7 @@ print(beyond_ascil)
 colors = ['black', 'white']
 sizes = ['S', 'M', 'L']
 # 列表推导式
-tshirts = [(colors, sizes) for color in colors for size in sizes]
+tshirts = [(color, size) for color in colors for size in sizes]
 print(tshirts)
 # for循环实现
 for color in colors:
