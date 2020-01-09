@@ -36,3 +36,16 @@ ITEM_TOTAL = slice(55, None)
 line_items = invoice.split('\n')[2:]
 for item in line_items:
     print(item[UNIT_PRICE], item[DESCRIPTION])
+
+# 给切片赋值
+l = list(range(10))
+print(l)
+l[2:5] = [20, 30]
+print(l)
+del l[5:7]
+print(l)
+l[3::2] = [11,22]
+print(l)
+l[2:5] = [100]
+print(l)
+
