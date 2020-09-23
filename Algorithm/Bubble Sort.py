@@ -23,7 +23,7 @@ n个数从左至右，编号从0开始到n-1，索引0和1的值比较，如果�
 # 和升序相反
 
 # 冒泡代码实现一
-num_list = [[1,9,8,5,6,7,4,3,2],[1,2,3,4,5,6,7,8,9]]
+num_list = [[1, 9, 8, 5, 6, 7, 4, 3, 2], [1, 2, 3, 4, 5, 6, 7, 8, 9]]
 nums = num_list[0]
 print(nums)
 length = len(nums)
@@ -31,14 +31,14 @@ count_swap = 0
 count = 0
 
 for i in range(length):
-    for j in range(length-i-1):
+    for j in range(length - i - 1):
         count += 1
-        if nums[j] > nums[j+1]:
-            nums[j],nums[j+1] = nums[j+1],nums[j]
+        if nums[j] > nums[j + 1]:
+            nums[j], nums[j + 1] = nums[j + 1], nums[j]
             count_swap += 1
 print(nums)
 
-num_list = [[1,9,8,5,6,7,4,3,2],[1,2,3,4,5,6,7,8,9],[1,2,3,4,5,6,7,9,8]]
+num_list = [[1, 9, 8, 5, 6, 7, 4, 3, 2], [1, 2, 3, 4, 5, 6, 7, 8, 9], [1, 2, 3, 4, 5, 6, 7, 9, 8]]
 nums = num_list[0]
 print(nums)
 length = len(nums)
@@ -46,10 +46,10 @@ count_swap = 0
 count = 0
 for i in range(length):
     flag = False
-    for j in range(length-i-1):
+    for j in range(length - i - 1):
         count += 1
-        if nums[j] > nums[j+1]:  #降序反之
-            nums[j],nums[j+1] = nums[j+1],nums[j]
+        if nums[j] > nums[j + 1]:  # 降序反之
+            nums[j], nums[j + 1] = nums[j + 1], nums[j]
             flag = True
             count_swap += 1
     if not flag:
