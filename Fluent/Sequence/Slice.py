@@ -49,3 +49,7 @@ print(l)
 l[2:5] = [100]
 print(l)
 
+# 对序列化使用+和*
+l = [1, 2, 3]
+print(l * 3)
+print(5 * 'abcd')
